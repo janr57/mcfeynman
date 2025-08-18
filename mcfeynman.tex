@@ -1,0 +1,57 @@
+% mcfeynman.tex 
+% Fichero principal
+%
+% Copyright (C) 2018-2025 José A. Navarro Ramón <janr.devel@gmail.com>
+% 1) Código fuente:
+% Licencia GNU-2
+%
+% 2) Texto legible en cualquier formato: pdf, postscript, html, etc.:
+% Licencia Creative Commons Recognition-NonCommercial-ShareAlike.
+% (CC-BY-NC-SA)
+%% ----------------------------------------------------------------------------
+\documentclass[a4paper,twoside]{book}
+
+% Paquetes
+\usepackage{mcfeynman.pkg}
+
+% Definiciones
+\usepackage{mcfeynman.defs}
+
+\begin{document}
+% -----------------------------------------------------------------------------
+% Portada
+\thispagestyle{empty}
+\include{./portada/portada}
+
+% -----------------------------------------------------------------------------
+% Tabla de contenidos
+\thispagestyle{empty}
+\include{./tablacontenidos/tablacontenidos}
+
+% -----------------------------------------------------------------------------
+% Teoría
+\part{Teoría}
+\include{./teoria/mc}
+
+% -----------------------------------------------------------------------------
+% Apéndices
+
+%% \part{Apéndices}
+%\appendix
+%\clearpage
+%\addappheadtotoc
+%\appendixpage
+%\include{./apendices/rf-coord_esfericas}
+%\include{./apendices/rf-desigualdades_vectoriales}
+
+% -----------------------------------------------------------------------------
+
+\end{document}
+
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: luatex
+%%% TeX-master: t
+%%% End:

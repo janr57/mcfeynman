@@ -16,7 +16,7 @@ mcfeynman.pdf: mcfeynman.tex $(FILES)
 	lualatex --enable-write18 $<
 	lualatex --enable-write18 $<
 
-$(IMGDIR)/%.eps: $(IMGSTATICDIR)/%.svg
+$(IMGSTATICDIR)/%.eps: $(IMGSTATICDIR)/%.svg
 	inkscape $< -o $@ --export-ignore-filters --export-ps-level=3
 
 
@@ -31,31 +31,4 @@ clean:
 	rm -rf tablacontenidos/*.aux tablacontenidos/*~
 	rm -rf prologo/*.aux prologo/*~
 	rm -rf apendices/*.aux apendices/*~
-
-
-
-
-#IMGDIR = img
-#
-#FILES = mcfeynman.pkg.sty\
-#	mcfeynman.defs.sty\
-#	portada/portada.tex\
-#	tablacontenidos/tablacontenidos.tex\
-#	teoria/mcfeynman.tex
-#
-#all: mcfeynman.pdf
-#
-#mcfeynman.pdf: mcfeynman.tex $(FILES)
-#
-#
-#$(FILES).pdf: %.tex
-#	lualatex $<
-#	lualatex $<
-#
-#
-#.PHONY: clean
-#
-#clean:
-#	rm -rf *.pdf *.ps *.dvi *.aux *.log *.toc *~
-#	rm -rf teoria/*.aux teoria/*~ apariencia/*.aux apariencia/*~
 
